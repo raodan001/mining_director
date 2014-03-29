@@ -1,1 +1,17 @@
-//
+<!-- INCLUDE overall_header.html -->
+
+	<form action="miningopts.php" method="post">
+<h2>{OPS_TITLE}</h2>
+<div align="right"><button id="mode" value="newop" type="submit">New</button><button id="mode" value="showop" type="submit">Edit</button><button id="mode" value="newop" type="submit">Delete</button></div>
+        <hr /><input type="hidden" id="mode" value="" />
+        <table cellpadding="5" cellspacing="0" width="100%">
+        	<thead align="left">
+            	<tr><th><input type="checkbox" id="chkall" onClick"checkedAll();" /></th><th>#</th><th>Name</th><th>Start Date/Time</th><th>End Date/Time</th><th>Members</th><th>Operation Length</th></tr>
+            </thead>
+        	<tbody>
+				{ACTIVE_OPS_LIST}
+    		</tbody>
+        </table>
+    </form>
+
+<!-- INCLUDE overall_footer.html -->
